@@ -1,10 +1,9 @@
 <script setup>
-import Button from "@/components/ui/button/Button.vue";
-import Logo from "@/Pertials/Logo.vue";
+import Logo from "@/Partials/Logo.vue";
 </script>
 
 <template>
-    <div class="my-4 max-w-7xl mx-auto">
+    <div class="py-4 px-4 max-w-[80vw] mx-auto">
         <nav class="text-white flex justify-between items-center">
             <div>
                 <Logo class="relative max-w-8" />
@@ -24,5 +23,8 @@ import Logo from "@/Pertials/Logo.vue";
             </div>
         </nav>
     </div>
-    <hr class="bg-gray-500 h-0.5" />
+    <hr class="max-w-[90vw] blur-[0.5px] mt-4 mx-auto" />
+    <main>
+        <slot />
+    </main>
 </template>

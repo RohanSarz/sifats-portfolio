@@ -3,8 +3,8 @@ import "../css/app.css";
 import { createApp, h } from "vue";
 import { createInertiaApp, Head, Link } from "@inertiajs/vue3";
 
-import Layout from "./Layouts/Layout.vue";
-import FlashMesg from "./Pertials/FlashMesg.vue";
+import Layout from "@/Layouts/Layout.vue";
+import FlashMesg from "@/Partials/FlashMesg.vue";
 import { ZiggyVue, route } from "../../vendor/tightenco/ziggy/src/js";
 
 // Import AOS and its CSS
