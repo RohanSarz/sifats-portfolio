@@ -3,8 +3,7 @@ import "../css/app.css";
 import { createApp, h } from "vue";
 import { createInertiaApp, Head, Link } from "@inertiajs/vue3";
 
-import Layout from "@/Layouts/Layout.vue";
-import FlashMesg from "@/Partials/FlashMesg.vue";
+import Layout from "./Layouts/Layout.vue";
 import { ZiggyVue, route } from "../../vendor/tightenco/ziggy/src/js";
 
 // Import AOS and its CSS
@@ -25,21 +24,25 @@ createInertiaApp({
             .use(ZiggyVue, Ziggy)
             .component("Head", Head)
             .component("Link", Link)
-            .component("FlashMesg", FlashMesg)
+
             .mount(el);
 
         // Initialize AOS after the Vue app is mounted
         const items = document.querySelectorAll("[data-aos]");
 
         items.forEach((el, index) => {
-            el.setAttribute("data-aos-delay", index * 150); // 100ms stagger
-            el.setAttribute("data-aos-duration", 300); // optional: control speed
+            el.setAttribute("data-aos-delay", index * 50); // 100ms stagger
+            // el.setAttribute("data-aos-duration", 300);  optional: control speed
+            el.setAttribute("data-aos-anchor-placement", "bottom-bottom");
         });
 
         AOS.init({
-            once: true, // run the animation only once
+            duration: 800,
+            anchorplacement: "top-center",
+            once: false, // run the animation only once
             easing: "ease-out-cubic", // looks smoother
         });
+        AOS.refresh();
     },
     progress: true,
 });

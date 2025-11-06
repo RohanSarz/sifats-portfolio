@@ -4,7 +4,7 @@ use App\Http\Controllers\AuthController;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 
-Route::inertia('/', 'HeroSection')->name('home');
+Route::inertia('/', 'Home')->name('home');
 
 // Route::inertia('/dashboard', 'Dashboard')->name('dashboard');
 
