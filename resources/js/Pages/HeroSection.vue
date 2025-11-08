@@ -3,12 +3,14 @@ import { Button } from "@/Components/ui/button";
 import { ChevronDown } from "lucide-vue-next";
 import { motion } from "motion-v";
 import ScrollToButton from "@/Components/ScrollToButton.vue";
+import SilkBackground from "@/Components/ui/bg-silk/SilkBackground.vue";
 </script>
 
 <template>
     <div
         class="w-screen h-[80vh] flex flex-col justify-center items-center space-y-4"
     >
+        <SilkBackground class="-z-5 opacity-30" />
         <h1 class="text-5xl text-white" data-aos="fade-up">UI/UX Designer</h1>
         <p
             class="text-lg text-white/50 wrap-break-word text-center"

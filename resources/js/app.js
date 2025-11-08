@@ -31,7 +31,7 @@ createInertiaApp({
         const items = document.querySelectorAll("[data-aos]");
 
         items.forEach((el, index) => {
-            el.setAttribute("data-aos-delay", index * 50); // 100ms stagger
+            el.setAttribute("data-aos-delay", index * 100); // 100ms stagger
             // el.setAttribute("data-aos-duration", 300);  optional: control speed
             el.setAttribute("data-aos-anchor-placement", "bottom-bottom");
         });
