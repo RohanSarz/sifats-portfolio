@@ -189,7 +189,7 @@
 }
 
 .nav-link {
-    @apply text-sm font-semibold text-white/60 hover:text-white hover:underline hover:underline-offset-8 transition-colors duration-300;
+    @apply text-sm text-white/60 hover:text-white hover:underline hover:underline-offset-8 transition-colors duration-300;
 }
 
 .aboutdesc {

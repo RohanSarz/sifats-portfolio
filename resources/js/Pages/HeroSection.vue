@@ -25,7 +25,7 @@ import SilkBackground from "@/Components/ui/bg-silk/SilkBackground.vue";
         </div>
 
         <motion.div
-            class="absolute bottom-16"
+            class="absolute bottom-[120px]"
             :animate="{
                 y: [0, -12, 0], // move up 4px and back down
             }"

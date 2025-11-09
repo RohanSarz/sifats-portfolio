@@ -12,9 +12,11 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AboutSection: typeof import('./resources/js/Pages/AboutSection.vue')['default']
+    Badge: typeof import('./resources/js/Components/ui/badge/Badge.vue')['default']
     Button: typeof import('./resources/js/Components/ui/button/Button.vue')['default']
     HeroSection: typeof import('./resources/js/Pages/HeroSection.vue')['default']
     Home: typeof import('./resources/js/Pages/Home.vue')['default']
+    Label: typeof import('./resources/js/Components/ui/label/Label.vue')['default']
     Layout: typeof import('./resources/js/Layouts/Layout.vue')['default']
     Login: typeof import('./resources/js/Pages/Auth/Login.vue')['default']
     NeuralBg: typeof import('./resources/js/Components/ui/bg-neural/NeuralBg.vue')['default']

@@ -9,5 +9,6 @@ import SkillsSection from "./SkillsSection.vue";
         <HeroSection />
         <AboutSection />
         <SkillsSection />
+        <AboutSection class="opacity-0" />
     </div>
 </template>

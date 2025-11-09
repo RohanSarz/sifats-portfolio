@@ -1,9 +1,21 @@
 <template>
     <div
         id="skillsSection"
-        class="w-screen h-[80vh] flex flex-col justify-center items-center space-y-4"
+        class="relative w-full h-[40vh] flex flex-col justify-center items-center space-y-4"
     >
-        <h1 class="text-5xl text-white" data-aos="fade-up">Skills</h1>
+        <NeuralBg :hue="800" class="absolute" />
+        <h1 class="text-3xl font-semibold" data-aos="fade-right">
+            Skills & Expertise
+        </h1>
+        <section class="z-10 px-4 py-4 w-full flex justify-evenly">
+            <div>
+                <Label>Design Process</Label>
+            </div>
+            <div>
+                <Label>Visual & Interaction</Label>
+            </div>
+            <div><Label>Tools & Technology</Label></div>
+        </section>
     </div>
 </template>
 

@@ -9,7 +9,7 @@ const isMenuOpen = ref(false);
 <template>
     <div class="max-w-[80vw] mx-auto">
         <nav
-            class="text-white flex justify-between items-center z-50 py-4 px-4 backdrop-blur-md"
+            class="text-white flex justify-around gap-x-96 z-50 py-4 px-4 border-2 border-red-200 backdrop-blur-md"
         >
             <!-- Logo (left) -->
             <motion.div
@@ -25,7 +25,9 @@ const isMenuOpen = ref(false);
             </motion.div>
 
             <!-- Desktop Menu (hidden on mobile) -->
-            <div class="hidden md:flex gap-6 items-center">
+            <div
+                class="hidden md:flex justify-center items-center space-x-12 border"
+            >
                 <Link href="/about" class="nav-link" data-aos="zoom-in-down"
                     >About</Link
                 >
@@ -37,6 +39,9 @@ const isMenuOpen = ref(false);
                 >
                 <Link href="#" class="nav-link" data-aos="zoom-in-down"
                     >Contact</Link
+                >
+                <Link href="#" class="nav-link" data-aos="zoom-in-down"
+                    >Resume</Link
                 >
             </div>
 
