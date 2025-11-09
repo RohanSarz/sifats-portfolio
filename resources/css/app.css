@@ -195,3 +195,10 @@
 .aboutdesc {
     @apply text-white/70 font-thin;
 }
+
+.skillLabel {
+    @apply font-mono text-white/80;
+}
+.skillset {
+    @apply text-sm font-mono text-white/80;
+}
