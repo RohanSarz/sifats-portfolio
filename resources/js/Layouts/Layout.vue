@@ -7,9 +7,9 @@ const isMenuOpen = ref(false);
 </script>
 
 <template>
-    <div class="max-w-[80vw] mx-auto">
+    <div class="mx-auto">
         <nav
-            class="text-white flex justify-around gap-x-96 z-50 py-4 px-4 border-2 border-red-200 backdrop-blur-md"
+            class="text-white flex justify-between items-center z-50 py-4 px-4 lg:px-8 border-2 border-red-200 backdrop-blur-md"
         >
             <!-- Logo (left) -->
             <motion.div
@@ -19,14 +19,14 @@ const isMenuOpen = ref(false);
                     repeat: Infinity,
                     ease: 'easeInOut',
                 }"
-                class="relative"
+                class="relative flex-shrink-0"
             >
                 <Logo data-aos="zoom-in-down" class="max-w-[120px]" />
             </motion.div>
 
             <!-- Desktop Menu (hidden on mobile) -->
             <div
-                class="hidden md:flex justify-center items-center space-x-12 border"
+                class="hidden md:flex justify-center items-center space-x-6 lg:space-x-12 flex-grow max-w-2xl"
             >
                 <Link href="/about" class="nav-link" data-aos="zoom-in-down"
                     >About</Link
@@ -46,10 +46,10 @@ const isMenuOpen = ref(false);
             </div>
 
             <!-- CTA Button (hidden on mobile) -->
-            <div class="hidden md:block">
+            <div class="hidden md:block flex-shrink-0">
                 <button
                     data-aos="zoom-in-down"
-                    class="border border-white/20 rounded py-2 px-3 bg-white/20 backdrop-blur-xl hover:bg-white/10 hover:border-white/30 transition-all duration-300"
+                    class="border border-white/20 rounded py-2 px-3 lg:px-4 bg-white/20 backdrop-blur-xl hover:bg-white/10 hover:border-white/30 transition-all duration-300 text-sm lg:text-base whitespace-nowrap"
                 >
                     <span>Get in Touch</span>
                 </button>
@@ -58,7 +58,7 @@ const isMenuOpen = ref(false);
             <!-- Mobile Menu Button -->
             <button
                 @click="isMenuOpen = !isMenuOpen"
-                class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1"
+                class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 flex-shrink-0"
                 aria-label="Toggle menu"
             >
                 <span
@@ -118,6 +118,14 @@ const isMenuOpen = ref(false);
                 data-aos="fade-up"
                 data-aos-delay="400"
                 >Contact</Link
+            >
+            <Link
+                @click="isMenuOpen = false"
+                href="#"
+                class="nav-link"
+                data-aos="fade-up"
+                data-aos-delay="500"
+                >Resume</Link
             >
             <button
                 @click="isMenuOpen = false"

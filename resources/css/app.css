@@ -197,7 +197,7 @@
 }
 
 .skillLabel {
-    @apply font-mono text-white/80;
+    @apply ;
 }
 .skillset {
     @apply text-sm font-mono text-white/80;
