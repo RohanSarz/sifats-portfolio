@@ -4,14 +4,15 @@
         class="relative w-full py-12 md:py-16 lg:py-20 flex flex-col justify-center items-center space-y-6 md:space-y-8"
     >
         <NeuralBg
-            :hue="600"
+            :hue="250"
             :saturation="2.5"
-            :chroma="0.9"
+            :chroma="1"
             class="absolute -z-10 opacity-40"
         />
         <h1
             class="text-2xl sm:text-3xl lg:text-4xl font-thin text-white px-4 text-center"
             data-aos="fade-up"
+            data-aos-delay="0"
         >
             Skills & Expertise
         </h1>
@@ -31,7 +32,7 @@
                     <Badge
                         v-for="(skill, index) in category.skills"
                         :key="index"
-                        class="text-xs lg:text-xs hover:border-blue-300/20 bg-blue-300/20 opacity-85 cursor-none backdrop-blur-lg"
+                        class="relative text-xs lg:text-xs hover:border-blue-300/20 bg-white/10 opacity-100 cursor-none backdrop-blur-3xl overflow-hidden"
                         data-aos="zoom-in"
                     >
                         {{ skill }}
@@ -44,7 +45,7 @@
 
 <script setup lang="ts">
 import NeuralBg from "@/Components/ui/bg-neural/NeuralBg.vue";
-import Label from "@/Components/ui/label/Label.vue";
+
 import Badge from "@/Components/ui/badge/Badge.vue";
 
 const categories: { title: string; skills: Array<string> }[] = [

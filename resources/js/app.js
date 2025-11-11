@@ -31,18 +31,18 @@ createInertiaApp({
         const items = document.querySelectorAll("[data-aos]");
 
         items.forEach((el, index) => {
-            //el.setAttribute("data-aos-delay", index * 150); // 100ms stagger
+            el.setAttribute("data-aos-delay", index * 50 + 200); // 100ms stagger
             // el.setAttribute("data-aos-duration", 300);  optional: control speed
-            el.setAttribute("data-aos-anchor-placement", "bottom-bottom");
+            //el.setAttribute("data-aos-anchor-placement", "center-bottom");
         });
 
         AOS.init({
             duration: 400,
-            anchorplacement: "top-center",
+            anchorplacement: "bottom-center",
             once: true, // run the animation only once
-            easing: "ease-out-cubic", // looks smoother
+            easing: "ease-in-cubic", // looks smoother
         });
         AOS.refresh();
     },
-    progress: true,
+    progress: false,
 });
