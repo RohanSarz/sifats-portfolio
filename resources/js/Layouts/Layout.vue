@@ -7,11 +7,11 @@ const isMenuOpen = ref(false);
 </script>
 
 <template>
-    <div class="mx-auto">
+    <div class="mx-auto w-full">
         <nav
-            class="text-white flex justify-between items-center z-50 py-4 px-4 lg:px-8 border-2 border-red-200 backdrop-blur-md"
+            class="text-white flex items-center justify-between z-50 py-4 px-4 sm:px-6 lg:px-8 backdrop-blur-md fixed top-0 w-full bg-black/30"
         >
-            <!-- Logo (left) -->
+            <!-- Left: Logo -->
             <motion.div
                 :animate="{ opacity: [0.6, 1, 0.6] }"
                 :transition="{
@@ -21,12 +21,15 @@ const isMenuOpen = ref(false);
                 }"
                 class="relative flex-shrink-0"
             >
-                <Logo data-aos="zoom-in-down" class="max-w-[120px]" />
+                <Logo
+                    class="max-w-[100px] sm:max-w-[120px]"
+                    data-aos="zoom-in-down"
+                />
             </motion.div>
 
-            <!-- Desktop Menu (hidden on mobile) -->
+            <!-- Center: Nav Links -->
             <div
-                class="hidden md:flex justify-center items-center space-x-6 lg:space-x-12 flex-grow max-w-2xl"
+                class="absolute left-1/2 transform -translate-x-1/2 hidden md:flex items-center space-x-6 lg:space-x-10"
             >
                 <Link href="/about" class="nav-link" data-aos="zoom-in-down"
                     >About</Link
@@ -45,21 +48,20 @@ const isMenuOpen = ref(false);
                 >
             </div>
 
-            <!-- CTA Button (hidden on mobile) -->
+            <!-- Right: Button -->
             <div class="hidden md:block flex-shrink-0">
                 <button
                     data-aos="zoom-in-down"
                     class="border border-white/20 rounded py-2 px-3 lg:px-4 bg-white/20 backdrop-blur-xl hover:bg-white/10 hover:border-white/30 transition-all duration-300 text-sm lg:text-base whitespace-nowrap"
                 >
-                    <span>Get in Touch</span>
+                    Get in Touch
                 </button>
             </div>
 
-            <!-- Mobile Menu Button -->
+            <!-- Mobile Toggle -->
             <button
                 @click="isMenuOpen = !isMenuOpen"
                 class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 flex-shrink-0"
-                aria-label="Toggle menu"
             >
                 <span
                     class="block w-6 h-0.5 bg-white transition-all duration-300"
@@ -82,61 +84,50 @@ const isMenuOpen = ref(false);
             </button>
         </nav>
 
-        <!-- Mobile Menu (slide from top or appear below nav) -->
-        <div
-            v-if="isMenuOpen"
-            class="md:hidden fixed inset-0 top-16 bg-black/95 backdrop-blur-lg z-40 flex flex-col items-center justify-start pt-8 space-y-8 text-xl"
-        >
-            <Link
-                @click="isMenuOpen = false"
-                href="/about"
-                class="nav-link"
-                data-aos="fade-up"
-                data-aos-delay="100"
-                >About</Link
+        <!-- Mobile Menu -->
+        <transition name="fade">
+            <div
+                v-if="isMenuOpen"
+                class="md:hidden fixed inset-0 top-[64px] bg-black/95 backdrop-blur-lg z-40 flex flex-col items-center justify-start pt-8 space-y-8 text-lg sm:text-xl"
             >
-            <Link
-                @click="isMenuOpen = false"
-                href="#"
-                class="nav-link"
-                data-aos="fade-up"
-                data-aos-delay="200"
-                >Skills</Link
-            >
-            <Link
-                @click="isMenuOpen = false"
-                href="#"
-                class="nav-link"
-                data-aos="fade-up"
-                data-aos-delay="300"
-                >Work</Link
-            >
-            <Link
-                @click="isMenuOpen = false"
-                href="#"
-                class="nav-link"
-                data-aos="fade-up"
-                data-aos-delay="400"
-                >Contact</Link
-            >
-            <Link
-                @click="isMenuOpen = false"
-                href="#"
-                class="nav-link"
-                data-aos="fade-up"
-                data-aos-delay="500"
-                >Resume</Link
-            >
-            <button
-                @click="isMenuOpen = false"
-                class="border border-white/20 rounded py-2 px-4 bg-white/20 backdrop-blur-xl hover:bg-white/10 hover:border-white/30 transition-all duration-300 mt-4"
-            >
-                Get in Touch
-            </button>
-        </div>
+                <Link @click="isMenuOpen = false" href="/about" class="nav-link"
+                    >About</Link
+                >
+                <Link @click="isMenuOpen = false" href="#" class="nav-link"
+                    >Skills</Link
+                >
+                <Link @click="isMenuOpen = false" href="#" class="nav-link"
+                    >Work</Link
+                >
+                <Link @click="isMenuOpen = false" href="#" class="nav-link"
+                    >Contact</Link
+                >
+                <Link @click="isMenuOpen = false" href="#" class="nav-link"
+                    >Resume</Link
+                >
+                <button
+                    @click="isMenuOpen = false"
+                    class="border border-white/20 rounded py-2 px-4 bg-white/20 backdrop-blur-xl hover:bg-white/10 hover:border-white/30 transition-all duration-300 mt-4"
+                >
+                    Get in Touch
+                </button>
+            </div>
+        </transition>
+
+        <hr class="max-w-[90vw] blur-[0.9px] mt-[72px] mx-auto" />
+        <main class="text-white mt-8 px-4">
+            <slot />
+        </main>
     </div>
-    <hr class="max-w-[90vw] blur-[0.9px] mt-4 mx-auto" />
-    <main class="text-white max-w-[100vw] overflow-hidden">
-        <slot />
-    </main>
 </template>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+</style>

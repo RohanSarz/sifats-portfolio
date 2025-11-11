@@ -7,7 +7,7 @@
             :hue="600"
             :saturation="2.5"
             :chroma="0.9"
-            class="absolute   -z-10 opacity-40"
+            class="absolute -z-10 opacity-40"
         />
         <h1
             class="text-2xl sm:text-3xl lg:text-4xl font-thin text-white px-4 text-center"
@@ -27,7 +27,7 @@
                 <label class="text-lg lg:text-xs font-light text-white/80">
                     {{ category.title }}
                 </label>
-                <div class="max-w-[215px] flex flex-wrap gap-2 ">
+                <div class="max-w-[215px] flex flex-wrap gap-2">
                     <Badge
                         v-for="(skill, index) in category.skills"
                         :key="index"

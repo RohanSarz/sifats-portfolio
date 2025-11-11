@@ -31,13 +31,13 @@ createInertiaApp({
         const items = document.querySelectorAll("[data-aos]");
 
         items.forEach((el, index) => {
-            el.setAttribute("data-aos-delay", index * 100); // 100ms stagger
+            //el.setAttribute("data-aos-delay", index * 150); // 100ms stagger
             // el.setAttribute("data-aos-duration", 300);  optional: control speed
             el.setAttribute("data-aos-anchor-placement", "bottom-bottom");
         });
 
         AOS.init({
-            duration: 800,
+            duration: 400,
             anchorplacement: "top-center",
             once: true, // run the animation only once
             easing: "ease-out-cubic", // looks smoother

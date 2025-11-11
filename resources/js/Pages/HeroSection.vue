@@ -8,20 +8,30 @@ import SilkBackground from "@/Components/ui/bg-silk/SilkBackground.vue";
 
 <template>
     <div
-        class="w-screen h-[80vh] flex flex-col justify-center items-center space-y-4"
+        class="min-h-screen mt-8 flex flex-col justify-center items-center px-4 sm:px-6 md:px-8 gap-5"
     >
         <SilkBackground class="-z-5 opacity-70" />
+
         <h1 class="text-5xl text-white" data-aos="fade-up">UI/UX Designer</h1>
         <p
             class="text-lg text-white/50 wrap-break-word text-center"
             data-aos="fade-up"
         >
-            Crafting intuitive digital experiences that bridge the gap <br />
+            Crafting intuitive digital experiences that bridge the gap
+            <br />
             between user needs and buisness goals.
         </p>
         <div class="space-x-4">
-            <ScrollToButton targetId="skillsSection" label="View My Work" />
-            <ScrollToButton targetId="aboutSection" label="About Me" />
+            <ScrollToButton
+                targetId="skillsSection"
+                label="View My Work"
+                data-aos="fade-up"
+            />
+            <ScrollToButton
+                targetId="aboutSection"
+                label="About Me"
+                data-aos="fade-up"
+            />
         </div>
 
         <motion.div
