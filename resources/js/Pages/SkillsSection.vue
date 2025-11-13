@@ -7,10 +7,10 @@
             :hue="250"
             :saturation="2.5"
             :chroma="1"
-            class="absolute -z-10 opacity-40"
+            class="absolute -z-10 0"
         />
         <h1
-            class="text-2xl sm:text-3xl lg:text-4xl font-thin text-white px-4 text-center"
+            class="text-2xl sm:text-3xl font-semibold lg:text-4xl text-white/80 px-4 text-center"
             data-aos="fade-up"
             data-aos-delay="0"
         >
@@ -25,7 +25,7 @@
                 class="flex-1 flex flex-col gap-3 md:gap-4 min-w-0 md:min-w-[200px]"
                 data-aos="fade-up"
             >
-                <label class="text-lg lg:text-xs font-light text-white/80">
+                <label class="text-lg lg:text-lg font-light text-white/80">
                     {{ category.title }}
                 </label>
                 <div class="max-w-[215px] flex flex-wrap gap-2">

@@ -39,7 +39,7 @@ createInertiaApp({
         AOS.init({
             duration: 400,
             anchorplacement: "bottom-center",
-            once: true, // run the animation only once
+            once: false, // run the animation only once
             easing: "ease-in-cubic", // looks smoother
         });
         AOS.refresh();
