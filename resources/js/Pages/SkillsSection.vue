@@ -7,7 +7,7 @@
             :hue="250"
             :saturation="2.5"
             :chroma="1"
-            class="absolute -z-10 0"
+            class="absolute -z-10 opacity-50"
         />
         <h1
             class="text-2xl sm:text-3xl font-semibold lg:text-4xl text-white/80 px-4 text-center"

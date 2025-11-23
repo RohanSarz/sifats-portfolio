@@ -14,6 +14,7 @@ declare module 'vue' {
     AboutSection: typeof import('./resources/js/Pages/AboutSection.vue')['default']
     Badge: typeof import('./resources/js/Components/ui/badge/Badge.vue')['default']
     Button: typeof import('./resources/js/Components/ui/button/Button.vue')['default']
+    FooterSection: typeof import('./resources/js/Pages/FooterSection.vue')['default']
     HeroSection: typeof import('./resources/js/Pages/HeroSection.vue')['default']
     Home: typeof import('./resources/js/Pages/Home.vue')['default']
     Label: typeof import('./resources/js/Components/ui/label/Label.vue')['default']

@@ -4,6 +4,24 @@ import { motion } from "motion-v";
 import { ref } from "vue";
 
 const isMenuOpen = ref(false);
+const navlinks = ref([
+    {
+        path: "/",
+        label: "Home",
+    },
+    {
+        path: "/about",
+        label: "About",
+    },
+    {
+        path: "#footerSection",
+        label: "Projects",
+    },
+    {
+        path: "/resume",
+        label: "Resume",
+    },
+]);
 </script>
 
 <template>
@@ -31,20 +49,13 @@ const isMenuOpen = ref(false);
             <div
                 class="absolute left-1/2 transform -translate-x-1/2 hidden md:flex items-center space-x-6 lg:space-x-10"
             >
-                <Link href="#" class="nav-link" data-aos="zoom-in-down"
-                    >About</Link
-                >
-                <Link href="#" class="nav-link" data-aos="zoom-in-down"
-                    >Skills</Link
-                >
-                <Link href="#" class="nav-link" data-aos="zoom-in-down"
-                    >Work</Link
-                >
-                <Link href="#" class="nav-link" data-aos="zoom-in-down"
-                    >Contact</Link
-                >
-                <Link href="#" class="nav-link" data-aos="zoom-in-down"
-                    >Resume</Link
+                <Link
+                    v-for="{ path, label } in navlinks"
+                    :key="path"
+                    :href="path"
+                    class="nav-link"
+                    data-aos="zoom-in-down"
+                    >{{ label }}</Link
                 >
             </div>
 
@@ -90,20 +101,13 @@ const isMenuOpen = ref(false);
             v-if="isMenuOpen"
             class="md:hidden fixed inset-0 top-[64px] bg-black/95 backdrop-blur-lg z-40 flex flex-col items-center justify-start pt-8 space-y-8 text-lg sm:text-xl"
         >
-            <Link @click="isMenuOpen = false" href="/about" class="nav-link"
-                >About</Link
-            >
-            <Link @click="isMenuOpen = false" href="#" class="nav-link"
-                >Skills</Link
-            >
-            <Link @click="isMenuOpen = false" href="#" class="nav-link"
-                >Work</Link
-            >
-            <Link @click="isMenuOpen = false" href="#" class="nav-link"
-                >Contact</Link
-            >
-            <Link @click="isMenuOpen = false" href="#" class="nav-link"
-                >Resume</Link
+            <Link
+                v-for="{ path, label } in navlinks"
+                :key="path"
+                :href="path"
+                class="nav-link"
+                data-aos="zoom-in-down"
+                >{{ label }}</Link
             >
             <button
                 @click="isMenuOpen = false"

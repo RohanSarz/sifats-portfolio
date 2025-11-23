@@ -11,7 +11,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 createInertiaApp({
-    title: (title) => `Teachlabs > ${title} `,
+    title: (title) => `@Sifat_Ali - ${title}`,
     resolve: (name) => {
         const pages = import.meta.glob("./Pages/**/*.vue", { eager: true });
         let page = pages[`./Pages/${name}.vue`];
@@ -31,16 +31,17 @@ createInertiaApp({
         const items = document.querySelectorAll("[data-aos]");
 
         items.forEach((el, index) => {
-            el.setAttribute("data-aos-delay", index * 50 + 200); // 100ms stagger
+            el.setAttribute("data-aos-delay", index * 10 + 80); // 100ms stagger
+            el.setAttribute("data-aos", "fade-up");
             // el.setAttribute("data-aos-duration", 300);  optional: control speed
             //el.setAttribute("data-aos-anchor-placement", "center-bottom");
         });
 
         AOS.init({
-            duration: 400,
-            anchorplacement: "bottom-center",
+            duration: 800,
+            anchorplacement: "top-top",
             once: false, // run the animation only once
-            easing: "ease-in-cubic", // looks smoother
+            easing: "ease-in ", // looks smoother
         });
         AOS.refresh();
     },

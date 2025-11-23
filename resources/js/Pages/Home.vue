@@ -5,10 +5,11 @@ import HeroSection from "./HeroSection.vue";
 import SkillsSection from "./SkillsSection.vue";
 </script>
 <template>
-    <div class=" ">
+    <div class="">
         <HeroSection />
         <AboutSection />
         <SkillsSection />
         <AboutSection class="opacity-0" />
+        <FooterSection />
     </div>
 </template>

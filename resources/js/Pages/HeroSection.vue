@@ -24,12 +24,12 @@ import SilkBackground from "@/Components/ui/bg-silk/SilkBackground.vue";
         <div class="space-x-4">
             <ScrollToButton
                 targetId="skillsSection"
-                label="View My Work"
+                label="Skills"
                 data-aos="fade-up"
             />
             <ScrollToButton
                 targetId="aboutSection"
-                label="About Me"
+                label="View My Work"
                 data-aos="fade-up"
             />
         </div>
