@@ -31,8 +31,8 @@ createInertiaApp({
         const items = document.querySelectorAll("[data-aos]");
 
         items.forEach((el, index) => {
-            el.setAttribute("data-aos-delay", index * 10 + 80); // 100ms stagger
             el.setAttribute("data-aos", "fade-up");
+            el.setAttribute("data-aos-delay", index * 10 + 80); // 100ms stagger
             // el.setAttribute("data-aos-duration", 300);  optional: control speed
             //el.setAttribute("data-aos-anchor-placement", "center-bottom");
         });
@@ -41,7 +41,7 @@ createInertiaApp({
             duration: 800,
             anchorplacement: "top-top",
             once: false, // run the animation only once
-            easing: "ease-in ", // looks smoother
+            easing: "ease-in-cubic", // looks smoother
         });
         AOS.refresh();
     },

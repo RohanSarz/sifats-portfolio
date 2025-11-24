@@ -18,7 +18,7 @@ import { motion } from "motion-v";
             </h1>
 
             <p
-                class="aboutdesc text-base sm:text-lg leading-relaxed"
+                class="desc text-base sm:text-lg leading-relaxed"
                 data-aos="fade-up"
             >
                 Crafting intuitive digital experiences that bridge the gap
@@ -28,7 +28,7 @@ import { motion } from "motion-v";
 
             <p
                 data-aos="fade-up"
-                class="aboutdesc text-base sm:text-lg leading-relaxed"
+                class="desc text-base sm:text-lg leading-relaxed"
             >
                 Hi, I’m Md Shifat Ali. I design digital experiences that feel
                 like second nature — the kind you don’t have to “figure out.” My
@@ -38,7 +38,7 @@ import { motion } from "motion-v";
 
             <p
                 data-aos="fade-up"
-                class="aboutdesc text-base sm:text-lg leading-relaxed"
+                class="desc text-base sm:text-lg leading-relaxed"
             >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Consequuntur soluta id eveniet nihil? Voluptates, cum

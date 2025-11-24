@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import AboutSection from "./AboutSection.vue";
 import HeroSection from "./HeroSection.vue";
+import ProjectSection from "./ProjectSection.vue";
 
 import SkillsSection from "./SkillsSection.vue";
 </script>
@@ -9,7 +10,7 @@ import SkillsSection from "./SkillsSection.vue";
         <HeroSection />
         <AboutSection />
         <SkillsSection />
-        <AboutSection class="opacity-0" />
+        <ProjectSection />
         <FooterSection />
     </div>
 </template>

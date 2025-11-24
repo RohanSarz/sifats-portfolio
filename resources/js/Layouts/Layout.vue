@@ -27,7 +27,7 @@ const navlinks = ref([
 <template>
     <div class="mx-auto py-2">
         <nav
-            class="text-white flex items-center justify-between z-50 py-4 px-4 sm:px-6 lg:px-8 backdrop-blur-sm rounded-2xl fixed top-0 w-full bg-black/30"
+            class="text-white flex items-center justify-between z-50 py-4 px-4 sm:px-6 lg:px-8 backdrop-blur-sm  fixed top-0 w-full bg-black/30"
         >
             <!-- Left: Logo -->
             <motion.div
@@ -111,7 +111,7 @@ const navlinks = ref([
             >
             <button
                 @click="isMenuOpen = false"
-                class="border border-white/20 rounded py-2 px-4 bg-white/20 backdrop-blur-xl hover:bg-white/10 hover:border-white/30 transition-all duration-300 mt-4"
+                class="border border-white/50 rounded py-2 px-3 lg:px-4 bg-white/60 backdrop-blur-xl hover:bg-white/10 hover:border-white/30 hover:text-white/80 transition-all duration-300 text-sm lg:text-base whitespace-nowrap"
             >
                 Get in Touch
             </button>
