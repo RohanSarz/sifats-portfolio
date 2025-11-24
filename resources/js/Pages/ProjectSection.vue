@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import InteractiveGridPattern from "@/Components/ui/interactive-grid-pattern/InteractiveGridPattern.vue";
 import ProjectCards from "@/Components/ProjectCards.vue";
 import { motion } from "motion-v";
+import Badge from "@/Components/ui/badge/Badge.vue";
+import ProjectCard from "@/Components/ProjectCard.vue";
 </script>
 
 <template>
@@ -16,8 +19,20 @@ import { motion } from "motion-v";
             </p>
         </div>
 
-        <div class="w-full max-w-6xl">
-            <ProjectCards />
+        <div class="relative w-full h-fit place-content-center px-2">
+            <InteractiveGridPattern
+                :class="'[mask-image:radial-gradient(1300px_circle_at_center,white,transparent)] absolute inset-0 '"
+                :width="50"
+                :height="50"
+                :squares="[60, 60]"
+                :squares-class-name="'fill-gray-600/20 hover:fill-blue-600/40 '"
+            />
+            <div class="flex flex-col items-center">
+                <ProjectCard />
+                <ProjectCard />
+                <ProjectCard />
+                <ProjectCard />
+            </div>
         </div>
     </div>
 </template>

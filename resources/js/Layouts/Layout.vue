@@ -14,7 +14,7 @@ const navlinks = ref([
         label: "About",
     },
     {
-        path: "#footerSection",
+        path: "#projectSection",
         label: "Projects",
     },
     {
