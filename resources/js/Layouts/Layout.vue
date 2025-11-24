@@ -27,7 +27,7 @@ const navlinks = ref([
 <template>
     <div class="mx-auto py-2">
         <nav
-            class="text-white flex items-center justify-between z-50 py-4 px-4 sm:px-6 lg:px-8 backdrop-blur-sm  fixed top-0 w-full bg-black/30"
+            class="text-white flex items-center justify-between z-50 py-4 px-4 sm:px-6 lg:px-8 backdrop-blur-sm fixed top-0 w-full bg-black/30"
         >
             <!-- Left: Logo -->
             <motion.div
